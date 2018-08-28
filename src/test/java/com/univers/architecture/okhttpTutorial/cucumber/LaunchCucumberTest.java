@@ -26,7 +26,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", tags = { "@scenario3" }, monochrome = true)
+@CucumberOptions(features = "src/test/resources/features", monochrome = true)
 public class LaunchCucumberTest {
 	private static final Logger log = LoggerFactory.getLogger(LaunchCucumberTest.class);
 	private static WireMockServer wireMockServer;
