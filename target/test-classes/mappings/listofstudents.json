@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/getAll"
+    },
+    "response": {
+        "status": 200,
+        "headers":
+			 {
+			 "Content-Type" : "application/json"
+			 },
+        "body": "[{\"firstname\":\"souf1\",\"lastname\":\"souf1\",\"email\":\"souf1@email.com\",\"username\":\"souf1\",\"password\":\"souf1\"},{\"firstname\":\"souf2\",\"lastname\":\"souf2\",\"email\":\"souf2@email.com\",\"username\":\"souf2\",\"password\":\"souf2\"}]"
+    }
+}

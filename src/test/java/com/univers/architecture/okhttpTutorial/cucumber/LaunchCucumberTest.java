@@ -38,28 +38,28 @@ public class LaunchCucumberTest {
 		wireMockServer = new WireMockServer();
 		wireMockServer.start();
 
-		ObjectMapper mapper = new ObjectMapper();
-		List<Student> students = new ArrayList<>();
-		Student std1 = new Student("souf1", "souf1", "souf1@email.com", "souf1", "souf1");
-		Student std2 = new Student("souf2", "souf2", "souf2@email.com", "souf2", "souf2");
-		students.add(std1);
-		students.add(std2);
+		// ObjectMapper mapper = new ObjectMapper();
+		// List<Student> students = new ArrayList<>();
+		// Student std1 = new Student("souf1", "souf1", "souf1@email.com", "souf1", "souf1");
+		// Student std2 = new Student("souf2", "souf2", "souf2@email.com", "souf2", "souf2");
+		// students.add(std1);
+		// students.add(std2);
 
-		// get all students
+		// // get all students
 
-		String arrayString = mapper.writeValueAsString(students);
-		stubFor(get(urlEqualTo("/getAll")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
-				.withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE).withBody(arrayString)));
+		// String arrayString = mapper.writeValueAsString(students);
+		// stubFor(get(urlEqualTo("/getAll")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
+		// 		.withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE).withBody(arrayString)));
 
-		// get Student with username
-		String studentString = mapper.writeValueAsString(std1);
-		stubFor(get(urlEqualTo("/getStudent/soufelhanafi1")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
-				.withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE).withBody(studentString)));
-		log.info("End Init Wire Mock Server ");
+		// // get Student with username
+		// String studentString = mapper.writeValueAsString(std1);
+		// stubFor(get(urlEqualTo("/getStudent/soufelhanafi1")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
+		// 		.withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE).withBody(studentString)));
+		// log.info("End Init Wire Mock Server ");
 
-		// post student
-		stubFor(post(urlEqualTo("/addStudent")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
-				.withBody(studentString).withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE)));
+		// // post student
+		// stubFor(post(urlEqualTo("/addStudent")).willReturn(aResponse().withStatus(HttpStatus.OK.value())
+		// 		.withBody(studentString).withHeader("Content-Type", APPLICATION_JSON_UTF8_VALUE)));
 	}
 
 	@AfterClass

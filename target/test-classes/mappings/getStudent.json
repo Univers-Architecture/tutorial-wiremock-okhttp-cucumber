@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/getStudent/soufelhanafi1"
+    },
+    "response": {
+        "status": 200,
+        "headers":
+			 {
+			 "Content-Type" : "application/json"
+			 },
+        "body": "{\"firstname\":\"souf1\",\"lastname\":\"souf1\",\"email\":\"souf1@email.com\",\"username\":\"souf1\",\"password\":\"souf1\"}"
+    }
+}
